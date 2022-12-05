@@ -57,6 +57,8 @@ def crawlearweb():
 
         print("Crawl Terminado. Creando excel")
 
+        # Referencia para unir los csv en un único fichero en excel
+        # https://stackoverflow.com/questions/40382591/how-to-writing-a-python-code-to-combine-multiple-csv-to-excel-without-having-n
         writer = ExcelWriter(Dirbox.get()+"/setup.xlsx") #Aquí va la ruta donde queremos guardar el excel y su nombre
 
         for filename in glob.glob(Dirbox.get()+"/*.csv"): #Aquí va la ruta donde se guardan todos los csv extraidos con el screaming por comandos
